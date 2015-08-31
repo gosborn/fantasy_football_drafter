@@ -1,0 +1,39 @@
+<%= form_for Player.new, url: show_mine_path, method: 'POST', remote: true do |f| %>
+  <%= f.submit 'Show your players' %>
+  <% end %>
+<%= form_for Player.new, url: show_undrafted_path, method: 'POST', remote: true do |f| %>
+  <%= f.submit 'Show undrafted players' %>
+  <% end %>
+<%= form_for Player.new, url: show_rb_path, method: 'POST', remote: true do |f| %>
+  <%= f.submit 'Show undrafted RBs' %>
+  <% end %>
+<%= form_for Player.new, url: show_wr_path, method: 'POST', remote: true do |f| %>
+  <%= f.submit 'Show undrafted WRs' %>
+  <% end %>
+<%= form_for Player.new, url: show_te_path, method: 'POST', remote: true do |f| %>
+  <%= f.submit 'Show undrafted TEs' %>
+  <% end %>
+<%= form_for Player.new, url: show_qb_path, method: 'POST', remote: true do |f| %>
+  <%= f.submit 'Show undrafted QBs' %>
+  <% end %>
+<%= form_for Player.new, url: show_k_path, method: 'POST', remote: true do |f| %>
+  <%= f.submit 'Show undrafted Ks' %>
+  <% end %>
+
+<table>
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Team</th>
+          <th>Bye</th>
+          <th>Overall</th>
+          <th>NerdRank</th>
+          <th>PositionRank</th>
+          <th>Drafted?</th>
+      </tr>
+  </thead>
+  <tbody id='players'>
+    <%= render 'undrafted' %>
+  </tbody>
+</table>

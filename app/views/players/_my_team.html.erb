@@ -1,0 +1,11 @@
+<%Player.all.where(:fantasy_team => "mine").order(:overall_rank).each do |player| %>
+  <tr id=<%=player.id%>>
+    <td><div class=<%=player.position%>><%= player.display_name %></div></td>
+    <td><div class=<%=player.position%>><%=player.position %></div></td> 
+    <td><div class=<%=player.position%>><%= player.team %></div></td>
+    <td><div class=<%=player.position%>><%= player.byeweek %></div></td>
+    <td><div class=<%=player.position%>><%= player.overall_rank.to_i %></div></td>
+    <td><div class=<%=player.position%>><%= player.nerd_rank %></div></td>
+    <td><div class=<%=player.position%>><%= player.position_rank.to_i %></div></td>
+  </tr>
+<%end%>
