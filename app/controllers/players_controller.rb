@@ -1,6 +1,4 @@
-
 class PlayersController < ApplicationController
-
   def index
   end
 
@@ -37,8 +35,4 @@ class PlayersController < ApplicationController
     @player.drafted = true
     @player.save
   end
-
-
-
-
 end

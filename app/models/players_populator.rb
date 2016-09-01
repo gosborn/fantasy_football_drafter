@@ -20,5 +20,4 @@ class PlayersPopulator < ActiveRestClient::Base
       p.save
     end
   end
-
 end
